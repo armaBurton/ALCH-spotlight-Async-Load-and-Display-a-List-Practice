@@ -20,6 +20,15 @@ export async function getKLK(){
     return checkError(response);
 }
 
+export async function getTea(){
+    const response = await client 
+        .from(`tea`)
+        .select();
+
+    return checkError(response);
+}
+
 function checkError({ data, error }){
     return error ? console.log(error) : data;
 }
+

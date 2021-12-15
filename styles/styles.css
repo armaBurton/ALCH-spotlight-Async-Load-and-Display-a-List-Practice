@@ -55,14 +55,6 @@ header {
     box-shadow: var(--shadow);
 }
 
-.heavy{
-    font-weight: 900;
-}
-
-.light{
-    font-weight: 500;
-}
-
 .colHolder{
     display: flex;
     gap: 20px;
@@ -193,4 +185,36 @@ footer {
     margin: 0;
     padding: 0;
     line-height: .063rem;
+}
+
+.teaCard{
+    background-color: white;
+    margin-top: 20px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    padding-right: 15px;
+}
+
+.teaCardTop{
+    display: flex;
+    align-items: center;
+}
+
+.teaCardBottom{
+    padding: 0 10px;
+}
+
+.teaImg{
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.heavy{
+    font-weight: 900;
+}
+
+.light{
+    font-weight: 500;
 }

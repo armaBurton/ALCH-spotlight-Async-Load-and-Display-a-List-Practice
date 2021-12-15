@@ -1,11 +1,13 @@
-import { getKLK, getMX } from "./fetch-utils.js";
+import { getKLK, getMX, getTea } from "./fetch-utils.js";
 import { renderMXcard } from "./render-mx-utils.js";
 import { renderKLKcard } from "./render-klk-utils.js";
+import { renderTeaCard } from "./render-tea-utils.js";
 
 // import functions and grab DOM elements
 
 const mxContainer = document.getElementById(`ktmMX`);
 const klkContainer = document.getElementById(`klkSection`);
+const teaContainer = document.getElementById(`teaSection`);
 
 // let state
 
@@ -20,7 +22,10 @@ window.addEventListener(`load`, async() => {
 
     const klkData = await getKLK();
     renderKLK(klkData);
-    console.log(klkData);
+
+    const teaData = await getTea();
+    renderTea(teaData);
+    console.log(teaData);
 });
 
 function renderMX(mxData){
@@ -37,5 +42,11 @@ function renderKLK(klkData){
         
         klkContainer.append(renderKLK);
     }
+}
 
+function renderTea(TeaData){
+    for (let t of TeaData){
+        let renderTea = renderTeaCard(t);
+        teaContainer.append(renderTea);
+    }
 }

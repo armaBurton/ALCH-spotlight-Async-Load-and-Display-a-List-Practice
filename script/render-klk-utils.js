@@ -43,7 +43,6 @@ export function renderKLKcard(data){
     statsDiv.append(klkAge, klkGender, klkStatus);
 
     //row three
-    console.log(data.weapon.length);
     const weaponDiv = document.createElement(`div`);
     weaponDiv.classList.add(`weaponDiv`);
 
@@ -67,7 +66,6 @@ export function renderKLKcard(data){
     const descDiv = document.createElement(`p`);
     descDiv.classList.add(`descDiv`);
     descDiv.textContent = data.desc;
-    console.log(data);
 
     //create card
     klkCard.append(nameDiv, statsDiv, weaponDiv, descDiv);
