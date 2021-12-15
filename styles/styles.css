@@ -44,6 +44,7 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--magenta);
+    width: 800px;
 }
 
 header {
@@ -54,6 +55,40 @@ header {
     box-shadow: var(--shadow);
 }
 
+.heavy{
+    font-weight: 900;
+}
+
+.light{
+    font-weight: 500;
+}
+
+.colHolder{
+    display: flex;
+    gap: 20px;
+}
+
+.ktmDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    width: 500px;
+    padding: 20px;
+}
+
+.colHolder{
+    border: 1px solid var(--magenta);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.ktmH2{
+    border-top: 1px solid var(--orange);
+    padding: 5px;
+    margin: 0;
+    font-weight: 900;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -79,4 +114,83 @@ footer {
     background-color: var(--indigo);
     color: var(--chartreuse);
     box-shadow: var(--footer-shadow);
+}
+
+.klkCard{
+    width: 500px;
+}
+
+.nameDiv{
+    /* vertical-align: baseline; */
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    line-height: 0;
+    background-color: black;
+    margin-top: 20px;
+    color: var(--orange);
+    padding: 5px 10px;
+    margin-bottom: 0;
+}
+
+.statsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.weaponDiv{
+    display: flex;
+    align-items: flex-start;
+    /* position: relative; */
+    /* right: 0px; */
+    vertical-align: top;
+    border: 1px solid black;
+}
+
+.klkLeft{
+    /* display: inline;
+    position: relative; */
+    width: 100px;
+    /* background-color: pink; */
+    padding: 0 10px;
+    margin-right: 0;
+}
+
+.weaponRightDiv{
+    /* position: absolute;
+    top: 0px;;
+    right:0; */
+    /* background-color: yellow; */
+    margin:0;
+    padding: 0;
+}
+
+.aka{
+    line-height: 0;
+    margin-left: 50px;
+}
+
+.klkName{
+    line-height: 0;
+}
+
+.descDiv{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 0;
+}
+
+.weaponRight{
+    margin: 0;
+    padding: 0;
+    line-height: .063rem;
 }
