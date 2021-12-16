@@ -6,7 +6,6 @@ export function renderTeaCard(data){
     teaImg.classList.add(`teaImg`);
     let image = data.img_url;
     teaImg.src = image;
-    console.log(teaImg);
 
     const dataDiv = document.createElement(`div`);
     dataDiv.classList.add(`dataDiv`);

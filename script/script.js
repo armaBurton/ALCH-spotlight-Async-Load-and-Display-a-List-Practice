@@ -1,13 +1,15 @@
-import { getKLK, getMX, getTea } from "./fetch-utils.js";
+import { getKLK, getMX, getTea, getAlien } from "./fetch-utils.js";
 import { renderMXcard } from "./render-mx-utils.js";
 import { renderKLKcard } from "./render-klk-utils.js";
 import { renderTeaCard } from "./render-tea-utils.js";
+import { renderAlienCard } from "./render-xeno-utils.js";
 
 // import functions and grab DOM elements
 
 const mxContainer = document.getElementById(`ktmMX`);
 const klkContainer = document.getElementById(`klkSection`);
 const teaContainer = document.getElementById(`teaSection`);
+const alienContainer = document.getElementById(`alienSection`);
 
 // let state
 
@@ -25,7 +27,10 @@ window.addEventListener(`load`, async() => {
 
     const teaData = await getTea();
     renderTea(teaData);
-    console.log(teaData);
+    
+    const alienData = await getAlien();
+    renderAlien(alienData);
+    console.log(alienData);
 });
 
 function renderMX(mxData){
@@ -50,3 +55,10 @@ function renderTea(TeaData){
         teaContainer.append(renderTea);
     }
 }
+
+function renderAlien(alienData){
+    for (let a of alienData){
+        let renderAlien = renderAlienCard(a);
+        alienContainer.append(renderAlien);
+    }
+} 
