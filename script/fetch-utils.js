@@ -28,6 +28,14 @@ export async function getTea(){
     return checkError(response);
 }
 
+export async function getAlien(){
+    const response = await client
+        .from(`nostromo_crew`)
+        .select();
+
+    return checkError(response);
+}
+
 function checkError({ data, error }){
     return error ? console.log(error) : data;
 }
